@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -39,13 +39,337 @@
   <p>Fresh sourdough & bakes 🍞</p>
 
   <div class="container">
-    <!-- PASTE YOUR SNAPWIDGET CODE BELOW -->
-    
-    <!-- Elfsight Instagram Feed | Untitled Instagram Feed -->
+   
 <script src="https://elfsightcdn.com/platform.js" async></script>
 <div class="elfsight-app-61fec907-fbd3-4e38-873b-a46f5bcee3e9" data-elfsight-app-lazy></div>
 
   </div>
+
+</body>
+</html>-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sunrise Salty Dough</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #faf7f2;
+      text-align: center;
+      padding: 40px;
+    }
+
+    h1 {
+      font-size: 2.2em;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 1.8em;
+      margin-top: 50px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    p {
+      color: #555;
+    }
+
+    .container {
+      margin-top: 30px;
+    }
+
+    iframe {
+      border: none;
+      overflow: hidden;
+    }
+
+    /* Order Form Styles */
+    .order-section {
+      max-width: 600px;
+      margin: 50px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      text-align: left;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="number"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 14px;
+      box-sizing: border-box;
+    }
+
+    input[aria-invalid="true"],
+    select[aria-invalid="true"],
+    textarea[aria-invalid="true"] {
+      border-color: #dc3545;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+
+    .product-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      background: #f9f9f9;
+      margin-bottom: 10px;
+      border-radius: 5px;
+    }
+
+    .product-name {
+      flex: 1;
+    }
+
+    .product-price {
+      color: #666;
+      margin: 0 15px;
+    }
+
+    .product-quantity {
+      width: 80px;
+    }
+
+    .submit-btn {
+      background: #d4a574;
+      color: white;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    .submit-btn:hover:not(:disabled) {
+      background: #c49563;
+    }
+
+    .submit-btn:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+    }
+
+    .order-note {
+      background: #fff9e6;
+      padding: 15px;
+      border-left: 4px solid #d4a574;
+      margin-bottom: 20px;
+      text-align: left;
+    }
+
+    /* Formspree error and success messages */
+    [data-fs-success] {
+      display: none;
+      background: #d4edda;
+      color: #155724;
+      padding: 15px;
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
+
+    [data-fs-success]:not(:empty) {
+      display: block;
+    }
+
+    [data-fs-error] {
+      color: #dc3545;
+      font-size: 14px;
+      margin-top: 5px;
+      display: block;
+    }
+
+    [data-fs-error]:empty {
+      display: none;
+    }
+
+    .field-error {
+      color: #dc3545;
+      font-size: 14px;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Sunrise Salty Dough</h1>
+  <p>Fresh sourdough & bakes 🍞</p>
+
+  <div class="container">
+    <!-- Elfsight Instagram Feed -->
+    <script src="https://elfsightcdn.com/platform.js" async></script>
+    <div class="elfsight-app-61fec907-fbd3-4e38-873b-a46f5bcee3e9" data-elfsight-app-lazy></div>
+  </div>
+
+  <!-- Weekly Order Form -->
+  <div class="order-section">
+    <h2>Place Your Weekly Order</h2>
+    
+    <div class="order-note">
+      <strong>📅 Order Deadline:</strong> Orders must be placed by Thursday 6 PM for next week's pickup/delivery.
+    </div>
+
+    <!-- Success message container -->
+    <div data-fs-success>
+      Thank you! Your order has been received. We'll contact you shortly to confirm.
+    </div>
+
+    <!-- Form-level error container -->
+    <div data-fs-error></div>
+
+    <form id="order-form">
+      <!-- Customer Information -->
+      <div class="form-group">
+        <label for="name">Name *</label>
+        <input type="text" id="name" name="name" required data-fs-field>
+        <span data-fs-error="name" class="field-error"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="email" required data-fs-field>
+        <span data-fs-error="email" class="field-error"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone *</label>
+        <input type="tel" id="phone" name="phone" required data-fs-field>
+        <span data-fs-error="phone" class="field-error"></span>
+      </div>
+
+      <!-- Pickup/Delivery -->
+      <div class="form-group">
+        <label for="fulfillment">Pickup or Delivery? *</label>
+        <select id="fulfillment" name="fulfillment" required data-fs-field>
+          <option value="">Select...</option>
+          <option value="pickup">Pickup</option>
+          <option value="delivery">Delivery</option>
+        </select>
+        <span data-fs-error="fulfillment" class="field-error"></span>
+      </div>
+
+      <div class="form-group" id="addressGroup" style="display: none;">
+        <label for="address">Delivery Address</label>
+        <textarea id="address" name="address" data-fs-field></textarea>
+        <span data-fs-error="address" class="field-error"></span>
+      </div>
+
+      <!-- Product Selection -->
+      <div class="form-group">
+        <label>Select Your Items:</label>
+        
+        <div class="product-item">
+          <span class="product-name">Sourdough Loaf</span>
+          <span class="product-price">$8.00</span>
+          <input type="number" class="product-quantity" name="sourdough_loaf" min="0" value="0" data-fs-field>
+        </div>
+
+        <div class="product-item">
+          <span class="product-name">Whole Wheat Sourdough</span>
+          <span class="product-price">$9.00</span>
+          <input type="number" class="product-quantity" name="whole_wheat_sourdough" min="0" value="0" data-fs-field>
+        </div>
+
+        <div class="product-item">
+          <span class="product-name">Cinnamon Rolls (6-pack)</span>
+          <span class="product-price">$12.00</span>
+          <input type="number" class="product-quantity" name="cinnamon_rolls" min="0" value="0" data-fs-field>
+        </div>
+
+        <div class="product-item">
+          <span class="product-name">Focaccia</span>
+          <span class="product-price">$10.00</span>
+          <input type="number" class="product-quantity" name="focaccia" min="0" value="0" data-fs-field>
+        </div>
+
+        <div class="product-item">
+          <span class="product-name">Croissants (4-pack)</span>
+          <span class="product-price">$14.00</span>
+          <input type="number" class="product-quantity" name="croissants" min="0" value="0" data-fs-field>
+        </div>
+      </div>
+
+      <!-- Special Requests -->
+      <div class="form-group">
+        <label for="notes">Special Requests or Notes</label>
+        <textarea id="notes" name="notes" placeholder="Any dietary restrictions, preferred pickup time, etc." data-fs-field></textarea>
+        <span data-fs-error="notes" class="field-error"></span>
+      </div>
+
+      <button type="submit" class="submit-btn" data-fs-submit-btn>Submit Order</button>
+    </form>
+  </div>
+
+  <!-- Custom validation script -->
+  <script>
+    // Show/hide address field based on fulfillment selection
+    document.getElementById('fulfillment').addEventListener('change', function() {
+      const addressGroup = document.getElementById('addressGroup');
+      const addressField = document.getElementById('address');
+      
+      if (this.value === 'delivery') {
+        addressGroup.style.display = 'block';
+        addressField.required = true;
+      } else {
+        addressGroup.style.display = 'none';
+        addressField.required = false;
+        addressField.value = ''; // Clear address when switching to pickup
+      }
+    });
+
+    // Add custom validation before Formspree submission
+    document.getElementById('order-form').addEventListener('submit', function(e) {
+      // Check if at least one item is ordered
+      const quantities = document.querySelectorAll('.product-quantity');
+      let totalItems = 0;
+      
+      quantities.forEach(input => {
+        totalItems += parseInt(input.value || 0);
+      });
+      
+      if (totalItems === 0) {
+        e.preventDefault();
+        alert('Please select at least one item to order.');
+        return false;
+      }
+    });
+  </script>
+
+  <!-- Initialize Formspree -->
+  <script>
+    window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+    formspree('initForm', { formElement: '#order-form', formId: 'mqpknpyw' });
+  </script>
+  <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 
 </body>
 </html>
